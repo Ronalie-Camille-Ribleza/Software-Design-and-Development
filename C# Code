@@ -1,1 +1,42 @@
+using System;
 
+namespace hangman_program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { 
+            Console.WriteLine("Hangman");
+            string[] words = new string[10];
+            words[0] = "parmesan";
+            words[1] = "dominion";
+            words[2] = "landscape";
+            words[3] = "perfume";
+            words[4] = "eternity";
+            words[5] = "cecilia";
+            words[6] = "wine";
+            words[7] = "ruler";
+            words[8] = "Sweden";
+            words[9] = "bolognese";
+            Random randGen = new Random();
+            var idx = randGen.Next(0, 9);
+            string randomword = words[idx];
+            char[] guess = new char[randomword.Length];
+            Console.Write("Enter your letter: ");
+
+            for (int p = 0; p < randomword.Length; p++)
+                guess[p] = '-';
+            
+            while(true)
+            {
+                char playerGuess = char.Parse(Console.ReadLine());
+                for (int j = 0; j < randomword.Length; j++)
+                {
+                    if (playerGuess == randomword[j])
+                        guess[j] = playerGuess;
+                }
+                Console.WriteLine(guess);
+            }
+        }
+    }
+}
