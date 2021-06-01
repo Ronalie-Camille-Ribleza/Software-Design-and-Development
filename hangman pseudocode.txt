@@ -1,0 +1,4 @@
+Begin hangmangame
+Get letter
+If letter is part of random word, display letter
+End hangmangame

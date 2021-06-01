@@ -1,0 +1,5 @@
+Step 1: Start
+Step 2: Assign a random number for a random word
+Step 3: Read input
+Step 4: If letter is part of the random word, print letter
+Step 5: End
